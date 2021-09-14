@@ -6,7 +6,8 @@
 #
 # (c) ben davies
 
-# profile extension for git
+# extension to enhnce the prompt for git
+# Requires: om-my-posh v3 and the following imports
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-Theme Paradox
+Set-PoshPrompt -Theme paradox
