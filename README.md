@@ -1,8 +1,19 @@
-# private-config
+# Improving my development environment workflow
 
-personal development environment configuration to improve development workflow, enhance shell font readability, improve git workflow and enhance ssh security with better use of ssh-agent for supporting ssh key passwords in Windows Powershell.
+My personal development environment configuration that improves development workflow and enhances security.
 
-## Get started
+Security Enhancements
+
+- Improved git and ssh workflows that make use of ssh private key file password security
+- Utilize Windows 10/11 ssh-agent components for identity integration within powershell when using git with ssh
+- Improve security on shared systems by working with code in your profile and adding some tooling to better support this workflow
+
+Style and usability enhancements
+
+- Windows Terminal enhancements with oh-my-posh
+- Enhanced PowerShell font readability with unicode support for graphical git prompts to support git context information
+
+## Getting started
 
 1. Install and configure Microsoft Terminal
 
