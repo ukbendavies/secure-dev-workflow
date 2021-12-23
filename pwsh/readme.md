@@ -15,10 +15,39 @@ Install-Module posh-git
 Install-Module oh-my-posh
 ```
 
-## Add Windows OpenSSH Capability
+## Correctly configure windows 10 / 11 ssh agent service
 
-Add Microsoft openssh feature to Windows to enable better sshagent integration with PowerShell so that you can password protect the ssh keys. Requires path to ssh override as done in the profile.
+The following commands install the Microsoft OpenSSH variant for better Windows shell integrations and bring the following benefits
+
+1. Enables ssh-agent service at Windows startup for hassle free continuous use
+1. Can add your ssh keys using ssh-add
+1. Can *password protect the ssh private key files* without having to enter your password every time ssh makes a server side connection, e.g. when using Git via SSH!
+
+### Add Windows OpenSSH Capability
+
+Add Microsoft openssh feature to Windows to enable better ssh-agent integration with PowerShell so that you can password protect the ssh keys. Requires path to ssh override as done in the profile.
 
 ```powershell
 Add-WindowsCapability -Online -Name OpenSSH.Client
 ```
+
+### Set the service to AutomaticDelayedStart
+
+Once installed the ssh-agent service is disabled by default and you need to enable and start the service in order to work with the agent in the background.
+
+```powershell
+Get-Service -Name ssh-agent | Set-Service -StartupType AutomaticDelayedStart
+```
+
+### Add ssh keys
+
+Add ssh private keys and use password protected identities without having to enter your password for every server command git issues.
+
+Note: you will be prompted for a password for the private key in order to add the identity.
+
+```ssh-add <path_to_your_private_ssh_key>```
+
+List the current managed identities using
+```ssh-add -l```
+
+Once configured you can now issue git commands such as ```git pull``` without a password re-prompt!
