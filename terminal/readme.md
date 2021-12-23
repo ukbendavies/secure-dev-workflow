@@ -1,6 +1,10 @@
 # Windows Terminal
 
-## pwsh updates
+This document describes how to enable unicode font support for an enhanced shell prompt for use with oh-my-posh and use Windows acrylic for transparency.
+
+The ```settings.json``` is included as a terminal configuration example but should not be used verbatim as terminal changes its spec frequently.
+
+## Terminal configuration documentation
 
 Terminal updated to use `powerline` theme with frosted glass and font updates
 
