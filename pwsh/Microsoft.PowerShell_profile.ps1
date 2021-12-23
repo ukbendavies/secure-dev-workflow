@@ -3,20 +3,17 @@
 # features
 #  - support ssh-agent for password protected keys using openssh on windows 10 / 11
 #  - helper functions for efficient source code directory traversal
-#  - powershell git extensions
-#  - theme for git
+#  - theme for git requires oh-my-posh and font support see readme.md
+#  - posh git extensions
 #
 # (c) ben davies
 
-## source location
-$codeDir = (Resolve-Path '~/src').Path
-
-## approved custom local tools
-$env:path += ';c:\local\bin'
-
 # environment
-# - fix: use windows openssh ssh-agent (req: openssh client component)
-$env:GIT_SSH = $((Get-Command -Name ssh).Source)
+
+$env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
+$codeDir = (Resolve-Path '~/src').Path            # source code location 
+$env:path += ';c:\local\bin'                      # approved custom local tools
+$OhMyPoshTheme = 'paradox'                        # theme choice
 
 # custom commands
 function autocompletepath {
@@ -69,12 +66,10 @@ function cdg {
 # helper functions
 function ConvertFrom-Base64 ([string] $EncodedText) {
   $DecodedText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))
-  write-output $DecodedText
+  Write-Output $DecodedText
 }
   
-# custom shell
-## - enhanced git prompt
-## - requires: om-my-posh v3 and the following imports
+# custom shell prompts
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-PoshPrompt -Theme paradox
+Set-PoshPrompt -Theme $OhMyPoshTheme
