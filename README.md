@@ -6,10 +6,10 @@ personal development environment configuration to improve development workflow, 
 
 1. Install and configure Microsoft Terminal
 
-    Read terminal [readme](.\terminal\readme.md)
+    Read terminal [readme](/terminal/readme.md)
 1. Add Windows OpenSSH capability
 
-   Read pwsh [readme](.\pwsh\readme.md)
+   Read pwsh [readme](/pwsh/readme.md)
 
 1. Create the following directories
 
