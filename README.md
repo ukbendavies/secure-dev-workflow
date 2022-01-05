@@ -25,7 +25,7 @@ How I set up my development environment to improve development workflow and enha
 - Windows Terminal enhancements with oh-my-posh
 - Uses integrated Windows OpenSSH Agent so you _can work natively in Powershell_
 - Enhanced PowerShell font readability with unicode support for graphical git prompts to support git context information
-- Source code directory consistency and new functions to support this flow: e.g. cdc <tab-complete to change to the source directory>
+- Source code directory consistency and new functions to support this flow: e.g. ```cdc <tab-complete to change to the source directory>```
 
 ## Getting started
 
