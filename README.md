@@ -41,6 +41,6 @@ How I set up my development environment to improve development workflow and enha
     ~\src - path to source code in your user profile
    ```
 
- You are now ready to use git with password protected ssh private keys. Be sure to set a password and choose to clone with ssh as part of the new workflow.
+ You are now ready to use git with password protected ssh private keys. Be sure to set a password for your ssh keys (you can do this on GitHub [here](https://github.com/settings/keys)) and choose to clone with ssh as part of the new workflow.
     
 *Secure, Sync, Code, Enjoy!*
