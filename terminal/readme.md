@@ -2,7 +2,7 @@
 
 This document describes how to enable unicode font support for an enhanced shell prompt for use with oh-my-posh and use Windows acrylic for transparency.
 
-Note: ```settings.json``` is file is included as a configuration example but should not be used verbatim as terminal changes its specification frequently.
+Note: ```settings.json``` is included as an example for completeness and should not be used verbatim as terminal changes its specification frequently.
 
 ## Terminal configuration documentation
 
