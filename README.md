@@ -2,6 +2,8 @@
 
 How I set up my development environment to improve development workflow and enhance security posture as part of a defense in depth strategy. The idea is to protect both the ssh-key files (often used without passwords) and protect your source code at rest. Should your laptop go awry or an attacker gain access to your ssh-key files then you have the best possibility of avoiding further losses.
 
+This whole process takes approximately 15 minutes.
+
 ## Environment
 
 - Windows 10 / 11
