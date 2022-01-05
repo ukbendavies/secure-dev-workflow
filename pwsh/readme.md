@@ -1,4 +1,4 @@
-# Configuring Powershell for use with OpenSSH on Windows
+# Integrating OpenSSH with Powershell
 
 ## Bootstrapping oh-my-posh
 
