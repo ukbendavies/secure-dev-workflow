@@ -24,14 +24,14 @@ This whole process takes approximately 30 minutes.
 - Utilize Windows 10 / 11 ssh-agent components for native integration with powershell when using git with ssh (and ssh natively)
 - Improve security on shared systems (e.g. virtual desktops) by working with source code in your profile (when used with disk encryption)
 
-### Style and usability enhancements
+### Style and Usability Enhancements
 
 - Windows Terminal enhancements with oh-my-posh
 - Uses integrated Windows OpenSSH Agent so you _can work natively in Powershell_
 - Enhanced PowerShell font readability with unicode support for graphical git prompts to support git context information
 - Source code directory consistency and new functions to support this flow: e.g. ```cdc <tab-complete to change to the source directory>```
 
-## Getting started
+## Getting Started
 
 1. Configure Microsoft Terminal for enhanced readability using unicode fonts and usage with Git workflows
 
