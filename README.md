@@ -31,7 +31,7 @@ How I set up my development environment to improve development workflow and enha
 
 1. Install and configure Microsoft Terminal
 
-    Read [Installing Windows Terminal](/terminal/readme.md)
+    Read [Enhance Windows Terminal](/terminal/readme.md)
     
 1. Add Windows OpenSSH capability to better integrate with PowerShell
 
