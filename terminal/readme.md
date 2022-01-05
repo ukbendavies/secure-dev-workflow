@@ -1,4 +1,4 @@
-# Windows Terminal
+# Enhance Windows Terminal
 
 This document describes how to enable unicode font support for an enhanced shell prompt for use with oh-my-posh and use Windows acrylic for transparency.
 
