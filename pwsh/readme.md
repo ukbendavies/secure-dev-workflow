@@ -1,4 +1,4 @@
-# Powershell readme
+# Configuring Powershell for use with OpenSSH on Windows
 
 ## Bootstrapping oh-my-posh
 
@@ -39,7 +39,7 @@ Once installed the ssh-agent service is disabled by default and you need to enab
 Get-Service -Name ssh-agent | Set-Service -StartupType AutomaticDelayedStart
 ```
 
-### Add ssh keys
+### Add SSH Keys
 
 Add ssh private keys and use password protected identities without having to enter your password for every server command git issues.
 
