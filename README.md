@@ -16,14 +16,15 @@ How I set up my development environment to improve development workflow and enha
 
 ### Security Enhancements
 
-- Improved git and ssh workflows that make use of ssh private key file password security (be sure to set a strong unique password)
+- Git and ssh workflows that make use of ssh private key file password security (be sure to set a strong unique password)
 - Utilize Windows 10 / 11 ssh-agent components for identity integration within powershell when using git with ssh (and with ssh itself)
-- Improve security on shared systems by working with code in your profile and adding some tooling to better support this workflow
+- Improve security on shared systems (e.g. virtual desktops) by working with source code in your profile and adding some tooling to better support this workflow
 
 ### Style and usability enhancements
 
 - Windows Terminal enhancements with oh-my-posh
 - Enhanced PowerShell font readability with unicode support for graphical git prompts to support git context information
+- Source code directory consistency and simple powershell commands to support this flow. e.g. cdc <tab complete to change to the source directory>
 
 ## Getting started
 
@@ -40,4 +41,6 @@ How I set up my development environment to improve development workflow and enha
     ~\src - path to source code in your user profile
    ```
 
+ You are now ready to use git with password protected ssh private keys. Be sure to set a password and choose to clone with ssh as part of the new workflow.
+    
 *Secure, Sync, Code, Enjoy!*
