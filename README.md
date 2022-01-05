@@ -31,10 +31,11 @@ How I set up my development environment to improve development workflow and enha
 
 1. Install and configure Microsoft Terminal
 
-    Read terminal [readme](/terminal/readme.md)
+    Read [Installing Windows Terminal](/terminal/readme.md)
+    
 1. Add Windows OpenSSH capability to better integrate with PowerShell
 
-   Read pwsh [readme](/pwsh/readme.md)
+   Read [Integrating OpenSSH with Powershell](/pwsh/readme.md)
 
 1. Create the following directory to contain your source code securely in your profile. Be sure to enable disk encryption (or at least file system directory encryption for this directory) and if roaming profiles are used within your organisation understand whether your user profile is right for your security posture.
 
