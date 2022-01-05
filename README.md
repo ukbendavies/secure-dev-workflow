@@ -23,6 +23,7 @@ How I set up my development environment to improve development workflow and enha
 ### Style and usability enhancements
 
 - Windows Terminal enhancements with oh-my-posh
+- Uses integrated Windows OpenSSH Agent so you can work natively in Windows in Powershell
 - Enhanced PowerShell font readability with unicode support for graphical git prompts to support git context information
 - Source code directory consistency and simple powershell commands to support this flow. e.g. cdc <tab complete to change to the source directory>
 
@@ -41,6 +42,14 @@ How I set up my development environment to improve development workflow and enha
     ~\src - path to source code in your user profile
    ```
 
- You are now ready to use git with password protected ssh private keys. Be sure to set a password for your ssh keys (you can do this on GitHub -> Profile -> Settings > [ssh keys](https://github.com/settings/keys)) and choose to clone with ssh as part of the new workflow.
+### Creating SSH Keys with Passwords
+
+GitHub has an article here to walk you through [setting up ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+
+- Be sure to set a password (passphrase) for your ssh keys!
+- You can add new ssh keys here: GitHub -> Profile -> Settings > [ssh keys](https://github.com/settings/keys))
+- Remember to clone with ssh as part of this new workflow.
+  
+You are now ready to use git with password protected ssh private keys.
     
 *Secure, Sync, Code, Enjoy!*
