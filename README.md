@@ -29,7 +29,7 @@ How I set up my development environment to improve development workflow and enha
 
 ## Getting started
 
-1. Install and configure Microsoft Terminal
+1. Configure Microsoft Terminal for enhanced readability using unicode fonts and usage with Git workflows
 
     Read [Enhance Windows Terminal](/terminal/readme.md)
     
