@@ -21,7 +21,7 @@ This whole process takes approximately 30 minutes.
 ### Security Enhancements
 
 - Git and ssh workflows that make use of ssh private key file password security (be sure to set a strong unique password)
-- Utilize Windows 10 / 11 ssh-agent components for identity integration within powershell when using git with ssh (and with ssh itself)
+- Utilize Windows 10 / 11 ssh-agent components for native integration with powershell when using git with ssh (and ssh natively)
 - Improve security on shared systems (e.g. virtual desktops) by working with source code in your profile (when used with disk encryption)
 
 ### Style and usability enhancements
