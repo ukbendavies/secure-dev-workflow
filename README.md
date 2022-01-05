@@ -1,4 +1,4 @@
-# Improving my development workflow and security
+# Improving my development workflow and security as part of defense in depth
 
 How I set up my development environment to improve development workflow and enhance security posture as part of a defense in depth strategy.
 
