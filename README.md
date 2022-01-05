@@ -49,7 +49,7 @@ This whole process takes approximately 30 minutes.
 
 ### Creating SSH Keys with Passwords
 
-GitHub has an article here to walk you through [setting up ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+GitHub has an article that walks you through: [setting up ssh keys](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 - Be sure to set a password (passphrase) for your ssh keys!
 - You can add new ssh keys here: GitHub -> Profile -> Settings > [ssh keys](https://github.com/settings/keys))
