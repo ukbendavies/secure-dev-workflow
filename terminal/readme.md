@@ -12,5 +12,7 @@ Terminal updated to use `powerline` theme with frosted glass and font updates
 
 ## Fonts with unicode support
 
-The recommended font for oh-my-posh is Cascadia-Code-PL and can be installed into Windows Fonts by getting a release from here: 
+A good font for oh-my-posh is Cascadia-Code-PL that can be downloaded from: 
 [Cascadia-code](https://github.com/microsoft/cascadia-code/releases)
+
+This can be unziped and installed into Windows Fonts. To do this search for 'Font settings' in the Windows start menu and use the drag drop to install feature with the font file you'd like to install.
