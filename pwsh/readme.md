@@ -15,7 +15,7 @@ Install-Module posh-git
 Install-Module oh-my-posh
 ```
 
-## Correctly configure windows 10 / 11 ssh agent service
+## Correctly configure Windows 10 / 11 ssh agent service
 
 The following commands install the Microsoft OpenSSH variant for better Windows shell integrations and bring the following benefits
 
