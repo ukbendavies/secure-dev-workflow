@@ -1,8 +1,10 @@
 # Improving my development workflow and security
 
-How I set up my development environment to improve development workflow and enhance security posture as part of a defense in depth strategy. The idea is to protect both the ssh-key files (often used without passwords) and protect your source code at rest. Should your laptop go awry or an attacker gain access to your ssh-key files then you have the best possibility of avoiding further losses.
+How I set up my development environment to improve development workflow and enhance security posture as part of a defense in depth strategy.
 
-This whole process takes approximately 15 minutes.
+The core ideas are to protect the ssh private key file (often used without a password) and protect source code at rest. Should laptop(s) go awry or an attacker gain access to the file system and get the ssh-key files then you have the best possibility of avoiding further losses.
+
+This whole process takes approximately 30 minutes.
 
 ## Environment
 
