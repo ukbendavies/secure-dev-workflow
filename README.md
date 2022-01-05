@@ -11,7 +11,7 @@ How I set up my development environment to improve development workflow and enha
 ## What can I get from this?
 
 - Improved security posture within your development workflow
-- Improved ease of use for git and ssh when using passwords
+- Improved ease of use for git and ssh when using password protected ssh-key files
 - Tooling that works with the workflow to enhance productivity
 
 ### Security Enhancements
