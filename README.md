@@ -11,6 +11,7 @@ This whole process takes approximately 30 minutes.
 - Windows 10 / 11
 - Powershell (6 / 7++ / core)
 - Git, Oh-My-Posh, Posh-Git and SSH
+- This walkthrough expects git and ssh to have been installed already: see [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## What can I get from this?
 
