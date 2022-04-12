@@ -10,18 +10,19 @@ This whole process takes approximately 30 minutes.
 
 - Windows 10 / 11
 - PowerShell (6 / 7++ / core)
-- Git, Oh-My-Posh, Posh-Git and SSH
-- This walkthrough expects git and ssh to have been installed already: see [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- Git, Posh-Git and SSH
+- Optionally Oh-My-Posh and PSReadLine
+- This walk-through expects git and ssh to have been installed already: see [Installing Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
 
 ## What can I get from this?
 
-- Improved security posture within your development workflow
+- Improved security posture within your development work-flow
 - Improved ease of use for git and ssh when using password protected ssh-key files
-- New tooling that works with the workflow to enhance productivity
+- New tooling that works with the work-flow to enhance productivity
 
 ### Security Enhancements
 
-- Git and ssh workflows that make use of ssh private key file password security (be sure to set a strong unique password)
+- Git and ssh work-flows that make use of ssh private key file password security (be sure to set a strong unique password)
 - Utilize Windows 10 / 11 ssh-agent components for native integration with PowerShell when using git with ssh (and ssh natively)
 - Improve security on shared systems (e.g. virtual desktops) by working with source code in your profile (when used with disk encryption)
 
@@ -29,8 +30,9 @@ This whole process takes approximately 30 minutes.
 
 - Windows Terminal enhancements with oh-my-posh
 - Uses integrated Windows OpenSSH Agent so you _can work natively in PowerShell_
-- Enhanced PowerShell font readability with unicode support for a graphical prompt to show git context information
+- Enhanced PowerShell font readability with Unicode support for a graphical prompt to show git context information
 - Source code directory consistency and new functions to support this flow: e.g. ```cdc <tab-complete to change to the source directory>```
+- PSReadLine command line history with predictive intellisense will revolutionize how you use history and work with the shell
 
 ## Getting Started
 
