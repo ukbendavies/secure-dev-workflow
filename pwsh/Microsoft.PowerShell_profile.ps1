@@ -9,11 +9,10 @@
 # (c) ben davies
 
 # environment
-
+$promptTheme = 'paradox'                          # oh my posh theme choice
+$codeDir = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
+$env:path += ";$($env:SystemDrive)\local\bin"     # your approved custom local tools on the path here
 $env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
-$codeDir = (Resolve-Path '~/src').Path            # source code location 
-$env:path += ';c:\local\bin'                      # approved custom local tools
-$OhMyPoshTheme = 'paradox'                        # theme choice
 
 # custom commands
 function autocompletepath {
@@ -22,23 +21,11 @@ function autocompletepath {
     [String] $word
   )
   return Get-ChildItem -Path $dir -Recurse -Depth 2 
-  | Select-Object  -ExpandProperty FullName
+  | Select-Object -ExpandProperty FullName
   | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" } 
   | ForEach-Object { $_ -replace "\\", "/" }
   | Where-Object { $_ -like "${word}*" }
   | ForEach-Object { "$_/" }
-}
-  
-function cdcode {
-  param (
-    [String] $Folder
-  )
-  Set-Location "${codeDir}/${Folder}/"
-  code .
-}
-Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
-  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-  autocompletepath -dir $codeDir -word $wordToComplete
 }
   
 function cdc {
@@ -47,12 +34,13 @@ function cdc {
   )
   Set-Location "${codeDir}/${Folder}/"
 }
+
 Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
-  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+  param ($commandName, $parameterName, $wordToComplete)
   autocompletepath -dir $codeDir -word $wordToComplete
 }
   
 # custom shell prompts
 Import-Module posh-git
 Import-Module oh-my-posh
-Set-PoshPrompt -Theme $OhMyPoshTheme
+Set-PoshPrompt -Theme $promptTheme
