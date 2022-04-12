@@ -60,7 +60,7 @@ GitHub has an article that walks you through: [setting up ssh keys](https://docs
   
 You are now ready to use git with password protected ssh private keys.
 
-### When completed
+### Shiny New Shell
 
 If you enabled all the features, your shiny new shell should now look something like this, where I'm searching the history for `> psre`; my machine name is edited out under the gray masking will be your `user@hostname` :
 
