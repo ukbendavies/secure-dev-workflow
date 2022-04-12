@@ -52,17 +52,6 @@ Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
   autocompletepath -dir $codeDir -word $wordToComplete
 }
   
-function cdg {
-  param (
-    [String] $Folder
-  )
-  Set-Location "${goDir}/${Folder}/"
-}
-Register-ArgumentCompleter -CommandName cdg -ParameterName Folder -ScriptBlock {
-  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-  autocompletepath -dir "$Env:GOPATH/src/" -word $wordToComplete
-}
-  
 # custom shell prompts
 Import-Module posh-git
 Import-Module oh-my-posh
