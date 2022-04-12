@@ -17,56 +17,50 @@ $OhMyPoshTheme = 'paradox'                        # theme choice
 
 # custom commands
 function autocompletepath {
-    param (
-      [String] $dir,
-      [String] $word
-    )
-    return Get-ChildItem -Path $dir -Recurse -Depth 2 
-      | Select-Object  -ExpandProperty FullName
-      | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" } 
-      | ForEach-Object { $_ -replace "\\", "/" }
-      | Where-Object { $_ -like "${word}*" }
-      | ForEach-Object { "$_/" }
-  }
+  param (
+    [String] $dir,
+    [String] $word
+  )
+  return Get-ChildItem -Path $dir -Recurse -Depth 2 
+  | Select-Object  -ExpandProperty FullName
+  | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" } 
+  | ForEach-Object { $_ -replace "\\", "/" }
+  | Where-Object { $_ -like "${word}*" }
+  | ForEach-Object { "$_/" }
+}
   
 function cdcode {
-    param (
-      [String] $Folder
-    )
-    Set-Location "${codeDir}/${Folder}/"
-    code .
-  }
-  Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
-    param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-    autocompletepath -dir $codeDir -word $wordToComplete
-  }
+  param (
+    [String] $Folder
+  )
+  Set-Location "${codeDir}/${Folder}/"
+  code .
+}
+Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
+  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+  autocompletepath -dir $codeDir -word $wordToComplete
+}
   
 function cdc {
-    param (
-      [String] $Folder
-    )
-    Set-Location "${codeDir}/${Folder}/"
-  }
-  Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
-        param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-        autocompletepath -dir $codeDir -word $wordToComplete
-  }
+  param (
+    [String] $Folder
+  )
+  Set-Location "${codeDir}/${Folder}/"
+}
+Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
+  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+  autocompletepath -dir $codeDir -word $wordToComplete
+}
   
 function cdg {
-    param (
-      [String] $Folder
-    )
-    Set-Location "${goDir}/${Folder}/"
-  }
-  Register-ArgumentCompleter -CommandName cdg -ParameterName Folder -ScriptBlock {
-    param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
-    autocompletepath -dir "$Env:GOPATH/src/" -word $wordToComplete
-  }
-
-# helper functions
-function ConvertFrom-Base64 ([string] $EncodedText) {
-  $DecodedText = [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String($EncodedText))
-  Write-Output $DecodedText
+  param (
+    [String] $Folder
+  )
+  Set-Location "${goDir}/${Folder}/"
+}
+Register-ArgumentCompleter -CommandName cdg -ParameterName Folder -ScriptBlock {
+  param($commandName, $parameterName, $wordToComplete, $commandAst, $fakeBoundParameters)
+  autocompletepath -dir "$Env:GOPATH/src/" -word $wordToComplete
 }
   
 # custom shell prompts
