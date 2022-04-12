@@ -118,7 +118,7 @@ Once configured you can now issue git commands such as ```git pull``` without a 
 
 If you want these changes every time you start a new PowerShell session you can modify your `$Profile`.
 
-You can either create your own or just take mine: copy the file or its contents: `Microsoft.PowerShell_profile.ps1` into your `$profile`.
+You can either create your own or just take mine: copy the file or its contents: [Microsoft.PowerShell_profile.ps1](Microsoft.PowerShell_profile.ps1) into your `$profile`.
 
 There are a couple of settings in the top section labeled `# environment`
 
