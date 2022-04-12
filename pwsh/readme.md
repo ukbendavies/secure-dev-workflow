@@ -101,10 +101,16 @@ $env:GIT_SSH = $((Get-Command -Name ssh).Source)
 ```
 
 Next add your private key to the agent key ring.
-`ssh-add <path_to_your_private_ssh_key>`
+
+```powershell
+ssh-add <path_to_your_private_ssh_key>
+```
 
 List set of managed identities, you should see the identity you just added.
-`ssh-add -l`
+
+```powershell
+ssh-add -l
+```
 
 Once configured you can now issue git commands such as ```git pull``` without a password re-prompt!
 
@@ -114,24 +120,28 @@ If you want these changes every time you start a new PowerShell session you can 
 
 You can either create your own or just take mine: copy the file or its contents: `Microsoft.PowerShell_profile.ps1` into your `$profile`.
 
-There are a couple of settings in the top section labeled 
-
-`# environment`
+There are a couple of settings in the top section labeled `# environment`
 
 ```powershell
 $promptTheme = 'paradox'                          # oh my posh theme choice
 $codeDir = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
 $env:path += ";$($env:SystemDrive)\local\bin"     # your approved custom local tools to include on the path here
 $env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
+$predictionViewStyle = 'ListView'                 # InlineView might feel more natural at first!
+$predictionSource = 'History'                     # All commands History
 ```
 
 `$promptTheme` defaults to my choice `paradox` but there are plenty of oh-my-posh choices if you'd prefer something else just update this here.
 
 `$codeDir` should be updated to your git source location. Or use my preferred path: `~/src` in your user profile. Just make a directory here if you don't have one and use this to house your source. This has the added benefit of encapsulation within your user space in Windows for added directory permissions.
 
-`c:\local\bin` - I usually put any command line exe tools like sysinternals etc. here so that they are automatically on the path. If you don't want this just remove it.
+`c:\local\bin` - I usually put any command line exe tools like system internals etc. here so that they are automatically on the path. If you don't want this just remove it.
 
 `$env:GIT_SSH` - if you decide to get rid of everything else from your `$profile` ***just remember this essential line of code that instructs Git to use Windows OpenSSH and not any other version!***
+
+`$predictionViewStyle` this is the history view mode. InlineView looks like a standard prompt with a ghosted closest match from history you can auto complete with right arrow key. The ListView shows a selection of closest matches and you can scroll through the list up/down arrow keys.
+
+`$predictionSource` this is a sensible default that builds history as you type it. Other options enable a pre-determined set of options etc. best read the instructions.
 
 ## You made it
 
