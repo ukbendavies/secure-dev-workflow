@@ -1,23 +1,23 @@
-# Integrating OpenSSH with Powershell
+# Integrating OpenSSH with PowerShell
 
 ## Bootstrapping oh-my-posh
 
-Update package management to use powershell gallery.
+Update package management to use PowerShell gallery.
 
 ```powershell
 powershell.exe -NoLogo -NoProfile -Command '[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; Install-Module -Name PackageManagement -Force -MinimumVersion 1.4.6 -Scope CurrentUser -AllowClobber -Repository PSGallery'
 ```
 
-Install required modules for posh-git and oh-my-posh from the powershell gallery.
+Install required modules for posh-git and oh-my-posh from the PowerShell gallery.
 
 ```powershell
 Install-Module posh-git
 Install-Module oh-my-posh
 ```
 
-## Correctly configure Windows 10 / 11 ssh agent service
+## Configure Windows 10 / 11 ssh agent service
 
-The following commands install the Microsoft OpenSSH variant for better Windows shell integrations and bring the following benefits
+The following commands install the Microsoft OpenSSH variant for better Windows PowerShell integrations and bring the following benefits
 
 1. Enables ssh-agent service at Windows startup for hassle free continuous use
 1. Can add your ssh keys using ssh-add
@@ -25,7 +25,7 @@ The following commands install the Microsoft OpenSSH variant for better Windows 
 
 ### Add Windows OpenSSH Capability
 
-Add Microsoft openssh feature to Windows to enable better ssh-agent integration with PowerShell so that you can password protect the ssh keys. Requires path to ssh override as done in the profile.
+Add Microsoft OpenSSH feature to Windows to enable better ssh-agent integration with PowerShell so that you can password protect the ssh keys. Requires path to ssh override as done in the profile.
 
 ```powershell
 Add-WindowsCapability -Online -Name OpenSSH.Client
