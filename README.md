@@ -1,10 +1,16 @@
-# Improve dev workflow & security as part of defense in-depth
+# Improve shell experience & security
 
 How I set up my development environment to improve my workflow and enhance security posture as part of a defense in depth strategy.
 
 The core objectives are to protect the ssh private key file (often used without a password) and protect source code at rest. Should laptop(s) go awry or an attacker gain access to the file system and get the ssh-key files then you have the best possibility of avoiding further losses.
 
 This whole process takes approximately 30 minutes.
+
+## Your shiny new PowerShell awaits
+
+If you enable all the features, your shiny new shell should now look something like this. Here I'm searching the history by typing the term `psre`. Note my machine name is masked under the gray and this will be your `user@hostname`.
+
+![ShinyShell](img/ExampleShell.jpg)
 
 ## Environment
 
@@ -59,12 +65,6 @@ GitHub has an article that walks you through: [setting up ssh keys](https://docs
 - Remember to clone with ssh as part of this new workflow.
   
 You are now ready to use git with password protected ssh private keys.
-
-### Shiny New Shell
-
-If you enabled all the features, your shiny new shell should now look something like this, where I'm searching the history for `> psre`; my machine name is edited out under the gray masking will be your `user@hostname` :
-
-![ShinyShell](img/ExampleShell.jpg)
 
 *Secure, Sync, Code, Enjoy!*
 
