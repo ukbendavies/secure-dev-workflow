@@ -25,9 +25,9 @@ function autocompletepath {
     [String] $dir,
     [String] $word
   )
-  return Get-ChildItem -Path $dir -Recurse -Depth 2 
+  return Get-ChildItem -Path $dir -Recurse -Depth 2
   | Select-Object -ExpandProperty FullName
-  | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" } 
+  | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" }
   | ForEach-Object { $_ -replace "\\", "/" }
   | Where-Object { $_ -like "${word}*" }
   | ForEach-Object { "$_/" }
