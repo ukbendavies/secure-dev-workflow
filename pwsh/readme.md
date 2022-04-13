@@ -50,9 +50,7 @@ Install-Module oh-my-posh -RequiredVersion 2.0.492
 
 #### PSReadLine
 
-PSReadLine is a recommended command line history management tooling.
-
-If you use `ctrl-r` to back-reference previous commands then you will love PSReadLine.
+PSReadLine is a recommended command line history management tooling and if you use `ctrl-r` to back-reference previous commands then you will love PSReadLine. However please note it does get deeply integrated into PowerShell and isn't so easy to fix or remove if it goes wrong. You can set options to customize or turn it off however.
 
 PSReadLine takes history to a whole new level with Predictive IntelliSense in PowerShell.
 
