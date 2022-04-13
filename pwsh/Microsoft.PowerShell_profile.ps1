@@ -13,7 +13,7 @@
 
 # environment
 $promptTheme = 'paradox'                          # oh my posh theme choice
-$SourcePath = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
+$SourcePath = (Resolve-Path '~/src').Path         # your source code path, example is: "C:\Users\[your username]\src"
 $env:path += ";$($env:SystemDrive)\local\bin"     # your approved custom local tools to include on the path here
 $env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
 $predictionViewStyle = 'ListView'                 # InlineView might feel more natural at first!
