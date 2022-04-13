@@ -13,7 +13,7 @@
 
 # environment
 $promptTheme = 'paradox'                          # oh my posh theme choice
-$codeDir = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
+$SourcePath = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
 $env:path += ";$($env:SystemDrive)\local\bin"     # your approved custom local tools to include on the path here
 $env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
 $predictionViewStyle = 'ListView'                 # InlineView might feel more natural at first!
@@ -22,27 +22,32 @@ $predictionSource = 'History'                     # All commands History
 # custom commands
 function autocompletepath {
   param (
-    [String] $dir,
-    [String] $word
+    [String] $Path,
+    [String] $WordToComplete
   )
-  return Get-ChildItem -Path $dir -Recurse -Depth 2
-  | Select-Object -ExpandProperty FullName
-  | ForEach-Object { $_ -replace "$($dir -replace "\\", "\\")\\" }
-  | ForEach-Object { $_ -replace "\\", "/" }
-  | Where-Object { $_ -like "${word}*" }
-  | ForEach-Object { "$_/" }
+  return Get-ChildItem -Path $Path -Recurse -Depth 2 |
+  Select-Object -ExpandProperty FullName |
+  ForEach-Object { $_ -replace "$($Path -replace "\\", "\\")\\" } |
+  ForEach-Object { $_ -replace "\\", "/" } |
+  Where-Object { $_ -like "${WordToComplete}*" } |
+  ForEach-Object { "$_/" }
 }
 
 function cdc {
+  #.SYNOPSIS
+  # Start typing to auto complete directory in SourcePath.
+  # Tab to rotate through the list or fully complete a discovered directory name.
+  # Changes to that directory when enter is pressed.
   param (
+    # Directory to autocomplete in SourcePath
     [String] $Folder
   )
-  Set-Location "${codeDir}/${Folder}/"
+  Set-Location "${SourcePath}/${Folder}/"
 }
 
 Register-ArgumentCompleter -CommandName cdc -ParameterName Folder -ScriptBlock {
-  param ($commandName, $parameterName, $wordToComplete)
-  autocompletepath -dir $codeDir -word $wordToComplete
+  param ($CommandName, $ParameterName, $WordToComplete)
+  autocompletepath -Path $SourcePath -WordToComplete $WordToComplete
 }
 
 # Enabled Features

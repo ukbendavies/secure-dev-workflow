@@ -124,7 +124,7 @@ There are a couple of settings in the top section labeled `# environment`
 
 ```powershell
 $promptTheme = 'paradox'                          # oh my posh theme choice
-$codeDir = (Resolve-Path '~/src').Path            # your source code path, example is: "C:\Users\[your username]\src"
+$SourcePath = (Resolve-Path '~/src').Path         # your source code path, example is: "C:\Users\[your username]\src"
 $env:path += ";$($env:SystemDrive)\local\bin"     # your approved custom local tools to include on the path here
 $env:GIT_SSH = $((Get-Command -Name ssh).Source)  # use windows openssh ssh-agent
 $predictionViewStyle = 'ListView'                 # InlineView might feel more natural at first!
@@ -133,7 +133,7 @@ $predictionSource = 'History'                     # All commands History
 
 `$promptTheme` defaults to my choice `paradox` but there are plenty of oh-my-posh choices if you'd prefer something else just update this here.
 
-`$codeDir` should be updated to your git source location. Or use my preferred path: `~/src` in your user profile. Just make a directory here if you don't have one and use this to house your source. This has the added benefit of encapsulation within your user space in Windows for added directory permissions.
+`$SourcePath` should be updated to your git source location. Or use my preferred path: `~/src` in your user profile. Just make a directory here if you don't have one and use this to house your source. This has the added benefit of encapsulation within your user space in Windows for added directory permissions.
 
 `c:\local\bin` - I usually put any command line exe tools like system internals etc. here so that they are automatically on the path. If you don't want this just remove it.
 
