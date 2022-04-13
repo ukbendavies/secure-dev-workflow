@@ -144,3 +144,7 @@ $predictionSource = 'History'                     # All commands History
 ## You made it
 
 If you made it this far, well done, you now have a much more functional experience within PowerShell.
+
+## FAQ
+
+So the obvious question... Why don't I put all of this in a script and automate the whole set-up. Well I'm glad you asked and I might just do that, however for now the shell is such an integrated part of peoples work-flows and very problematic if it goes wrong. By doing this step by step you have a choice as to what is integrated into your shell and what is not. In addition you get to understand the process along the way, for not too much effort, you get a good reward and know what parts are doing what for you :)
