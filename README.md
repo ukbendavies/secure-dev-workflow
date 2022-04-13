@@ -62,7 +62,7 @@ GitHub has an article that walks you through: [setting up ssh keys](https://docs
 
 - Be sure to set a password (passphrase) for your ssh keys!
 - You can add new ssh keys here: GitHub -> Profile -> Settings > [ssh keys](https://github.com/settings/keys)
-- Remember to clone with ssh as part of this new workflow.
+- Remember to use 'ssh' when cloning repos with git as part of this new workflow.
   
 You are now ready to use git with password protected ssh private keys.
 
