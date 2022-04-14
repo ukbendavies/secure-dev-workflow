@@ -50,9 +50,9 @@ Install-Module oh-my-posh -RequiredVersion 2.0.492
 
 #### PSReadLine
 
-PSReadLine is a recommended command line history management tooling and if you use `ctrl-r` to back-reference previous commands then you will love PSReadLine. However please note it does get deeply integrated into PowerShell and isn't so easy to fix or remove if it goes wrong. You can set options to customize or turn it off however.
-
 PSReadLine takes history to a whole new level with Predictive IntelliSense in PowerShell.
+
+PSReadLine is my recommended command line history management tooling and if you use `ctrl-r` to back-reference previous commands then you will love PSReadLine. However please note it does get deeply integrated into PowerShell and isn't so easy to fix or remove if it goes wrong. You can set options to customize or turn it off however.
 
 I recommend reading [PSReadLine Introduction](https://devblogs.microsoft.com/powershell/announcing-psreadline-2-1-with-predictive-intellisense/).
 
@@ -62,7 +62,7 @@ Install-Module PSReadLine -RequiredVersion 2.2.2
 
 ## Configure Windows 10 / 11 ssh agent service
 
-The following commands install the Microsoft OpenSSH variant for better Windows PowerShell integrations and bring the following benefits
+The following commands install the Microsoft OpenSSH variant for better Windows PowerShell integrations and bring the following benefits:
 
 1. Enables ssh-agent service at Windows startup for hassle free continuous use
 1. Can add your ssh keys using ssh-add
@@ -70,7 +70,7 @@ The following commands install the Microsoft OpenSSH variant for better Windows 
 
 ### Add Windows OpenSSH Capability
 
-Add Microsoft OpenSSH feature to Windows to enable better ssh-agent integration with PowerShell so that you can password protect the ssh keys. Requires path to ssh override as done in the profile.
+Add the Microsoft OpenSSH feature to Windows to enable better ssh-agent integration with PowerShell so that you can password protect your ssh keys.
 
 ```powershell
 Add-WindowsCapability -Online -Name OpenSSH.Client
@@ -86,11 +86,11 @@ Get-Service -Name ssh-agent | Set-Service -StartupType AutomaticDelayedStart
 
 ### Add SSH Keys
 
-Add ssh private keys and use password protected identities without having to enter your password for every server command git issues.
+Add ssh private keys and use password protected identities without having to (re-)enter your password for every server command git makes.
 
-Note: you will be prompted for a password for the private key in order to add the identity.
+Note: you will be prompted for your ssh private key password to add the new identity.
 
-First tell Git to use the Windows OpenSSH Agent
+First we must tell Git to use the Windows OpenSSH Agent instead of the default. I recommend adding this to the powershell `$profile` so you don't have to do this for each new shell instance. This is already done in the example profile provided in the pwsh directory.
 
 ```powershell
 # *** DONT'T SKIP THIS!!! *** #
