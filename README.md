@@ -1,6 +1,6 @@
 # Improve shell experience & security
 
-How I set up my development environment to improve my workflow and enhance security posture as part of a defense in depth strategy.
+This repo describes some basic coufiguration for PowerShell on Windows to improve my development workflow and enhance the security posture of my environment as a small part of a defense in depth strategy.
 
 The core objectives are to protect the ssh private key file (often used without a password) and protect source code at rest. Should laptop(s) go awry or an attacker gain access to the file system and get the ssh-key files then you have the best possibility of avoiding further losses.
 
