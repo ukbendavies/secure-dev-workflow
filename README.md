@@ -1,4 +1,4 @@
-# Improve shell experience & security
+# Improve developmeent PowerShell experience & enhance security
 
 This repo describes some basic coufiguration for PowerShell on Windows to improve my development workflow and enhance the security posture of my environment as a small part of a defense in depth strategy.
 
